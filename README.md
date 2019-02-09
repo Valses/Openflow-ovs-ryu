@@ -11,7 +11,7 @@ by zhangyaxin
 ## 2. iptables原理	
 #### 2.1 iptables基本工作原理
 
-![text](img-folder/iptables_1.png)
+![text](https://github.com/Valses/img-folder/blob/master/iptables_1.png)
 
 五个钩子函数（hook functions）,也叫五个规则链。
   
@@ -77,7 +77,7 @@ example: `--algo bm --string"google"`
 
 1. IPT消息中固定字段中包含iptables目的地址和端口。
 2. 使用oxm匹配的项有：表名，命令，优先级，链名，动作，表项index，目的IP，源IP，目的IP掩码，源IP掩码，协议，目的端口1，目的端口2，源端口1，源端口2。
-<img src="img-folder/iptables_2.png" width = "390" height = "450" align=center />
+<img src="https://github.com/Valses/img-folder/blob/master/iptables_2.png" width = "390" height = "450" align=center />
 
 ## 4. 代码修改
 #### 4.1 对ovs的修改
