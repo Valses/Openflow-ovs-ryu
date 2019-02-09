@@ -231,7 +231,7 @@ example: `--algo bm --string"google"`
                          const union mf_value *value,
                          struct mitmatch *match);
     以上新增函数的调用关系图如下：  
-    <img src="img-folder/iptables_3.png" width = "500" height = "430" align=center/>
+    <img src="https://github.com/Valses/img-folder/blob/master/iptables_3.png" width = "500" height = "430" align=center/>
 
 * 下面的修改不是非常必要，不改也不会报错，但是也说明一下，以下函数中都有关于消息类型的switch-case选择，所以就在case中合适的位置添加了新消息。
 	1. 修改了ofp-util.c中的函数static bool ofputil\_is\_bundlable  
