@@ -1,24 +1,18 @@
-####RESTAPI测试样例
-#####使用
+#### RESTAPI测试样例
+##### 使用
 首先，你需要拥有openvswitch-2.5.2-z.tar.gz，ryu-z.tar.gz和ruletables-service-z.tar.gz（-z表示这是修改过的源码，以免混淆） 
 
 0. 安装mininet。
- 
 
 1. 解压openvswitch-2.5.2-z.tar.gz，进入其目录下：
 
-
-
 2. 进入ryu的目录下：
-
-
 
 3. 进入ruletables的目录下：
 
 
 
-
-#####说明
+##### 说明
 match域的匹配条件有：  
 table\_name，command，priority，chain\_name，action，index，source\_ip，dest\_ip，source\_ip\_mask，dest\_ip\_mask，proto，source\_port1，source\_port2，dest\_port1，dest\_port2。  
 
@@ -26,7 +20,7 @@ RYU运行:
 $ ryu-manager /ryu/app/ofctl\_rest.py /ryu/app/my\_simple\_switch\_13.py
 
 使用Firefox的插件HttpRequester或者Chrome插件POSTMAN进行测试。
-#####样例
+##### 样例
 * 清空 iptables -t filter -F
 
 		{
