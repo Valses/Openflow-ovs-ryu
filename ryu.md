@@ -141,7 +141,7 @@ learning-switch.c: static void lswitch\_process\_packet
 
 
 ---
-###部分函数及数据结构
+### 部分函数及数据结构
 消息类型解码函数 ofp-msgs.c
 
 	enum ofperr
@@ -194,7 +194,7 @@ learning-switch.c: static void lswitch\_process\_packet
 	    enum ofpbuf_source source;  /* Source of memory allocated as 'base'. */
 	};
 	
-###修改ovs源码
+### 修改ovs源码
 暂时是考虑将新增消息添加到v1.3中。
 
 1. 在include/openflow/openflow-1.3.h中扩展of协议，增加新的消息类型ofp13_mymsgtype。
@@ -266,7 +266,3 @@ learning-switch.c: static void lswitch\_process\_packet
 		
 * 编译的时候，在lib/ofp-msg.h中报错，是因为定义类型名和规则不符，以及类型名之后有空格，所以这个要求还是挺严格的。  
 * 报错：nicira-ext.h，但是错误行其实是注释，于是就把报错的那一块注释删掉了。
-
-安装:
-
-* make
