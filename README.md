@@ -11,7 +11,7 @@ by zhangyaxin
 ## 2. iptables原理	
 #### 2.1 iptables基本工作原理
 
-![text](p_ipt/iptables_1.png)
+![text](img-folder/iptables_1.png)
 
 五个钩子函数（hook functions）,也叫五个规则链。
   
@@ -77,7 +77,7 @@ example: `--algo bm --string"google"`
 
 1. IPT消息中固定字段中包含iptables目的地址和端口。
 2. 使用oxm匹配的项有：表名，命令，优先级，链名，动作，表项index，目的IP，源IP，目的IP掩码，源IP掩码，协议，目的端口1，目的端口2，源端口1，源端口2。
-<img src="p_ipt/iptables_2.png" width = "390" height = "450" align=center />
+<img src="img-folder/iptables_2.png" width = "390" height = "450" align=center />
 
 ## 4. 代码修改
 #### 4.1 对ovs的修改
@@ -231,7 +231,7 @@ example: `--algo bm --string"google"`
                          const union mf_value *value,
                          struct mitmatch *match);
     以上新增函数的调用关系图如下：  
-    <img src="p_ipt/iptables_3.png" width = "500" height = "430" align=center/>
+    <img src="img-folder/iptables_3.png" width = "500" height = "430" align=center/>
 
 * 下面的修改不是非常必要，不改也不会报错，但是也说明一下，以下函数中都有关于消息类型的switch-case选择，所以就在case中合适的位置添加了新消息。
 	1. 修改了ofp-util.c中的函数static bool ofputil\_is\_bundlable  
